@@ -396,3 +396,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/API-Sample
+/LoggingSample
+/ModelValidation
+/NSwaggerSample
+/RoutingSample
+/SampleWebApi
+/SampleWebApp
+/SPA-Sample
