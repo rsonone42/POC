@@ -18,6 +18,7 @@ namespace RepositoryPatternSample
             builder.Services.ConfigureSQLDBContext(builder.Configuration);
             builder.Services.ConfigureRepositories();
             builder.Services.ConfigureServices();
+            builder.Services.EnsureCreataedDB();
 
             var app = builder.Build();
 

@@ -22,7 +22,7 @@ namespace RepositoryPatternSample.Controllers
         {
             try
             {
-                userService.CreateUser(new User() { CreatedDateTime = DateTime.Now, Email = user.Email, FirstName = user.FirstName, LastName = user.LastName, MiddleName = user.MiddleName, MobileNumber = user.MiddleName, Password = user.Password, UserId = user.UserId });
+                userService.CreateUser(new User() { CreatedDateTime = DateTime.Now, Email = user.Email, FirstName = user.FirstName, LastName = user.LastName, MiddleName = user.MiddleName, MobileNumber = user.MobileNumber, Password = user.Password, UserId = user.UserId });
             }
             catch (Exception ex)
             {

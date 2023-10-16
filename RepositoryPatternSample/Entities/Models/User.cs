@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Models
 {
-    [Table("enduser")]
+    [Table("user")]
     public class User
     {
         [Required(ErrorMessage = "UserId is required")]
@@ -27,7 +27,7 @@ namespace Entities.Models
         [Required]
         public string FirstName { get; set; }
 
-        public string MiddleName { get; set; }
+        public string? MiddleName { get; set; }
 
         [Required]
         public string LastName { get; set; }

@@ -12,5 +12,11 @@ namespace RepositoryPatternSample.Extensions
             string connectionString = configuration.GetConnectionString("MyConnectionString");
             services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(connectionString));
         }
+
+        public static void EnsureCreataedDB(this IServiceCollection services)
+        {
+            services.BuildServiceProvider().GetService<RepositoryContext>()?.Database.EnsureCreated();  
+        }
+        
     }
 }
