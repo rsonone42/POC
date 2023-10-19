@@ -1,6 +1,10 @@
 using RepositoryPatternSample.Extensions;
 using Repository;
 using RepositoryService;
+using FluentValidation.AspNetCore;
+using RepositoryPatternSample.FluentValidator;
+using FluentValidation;
+
 namespace RepositoryPatternSample
 {
     public class Program
@@ -12,6 +16,8 @@ namespace RepositoryPatternSample
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
+            builder.Services.AddValidatorsFromAssemblyContaining<UserValidator>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
